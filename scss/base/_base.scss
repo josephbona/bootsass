@@ -4,9 +4,13 @@ body {
 .container-fluid {
 	max-width: 1170px;
 }
-.show-on-hover:hover>.dropdown-menu {
-	display: block;
-}
-.margin-bottom-20 {
-	margin-bottom: 20px;
+.show-on-hover {
+	@include max-width($grid-float-breakpoint-max) {
+		&:not(.open)>.dropdown-menu, &:not(.open):hover>.dropdown-menu {
+			display: none;
+		}
+	}
+	&:hover>.dropdown-menu {
+		display: block;
+	}
 }
