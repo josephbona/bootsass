@@ -4,7 +4,8 @@
 }
 .alignleft, img.alignleft {
 	float: left;
-	@include set-margin(.5em,right-bottom);
+	margin-right: .5em;
+	margin-bottom: .5em;
 
 	@include max-width(520px) {
 		float: none;
@@ -14,13 +15,14 @@
 }
 .alignright, img.alignright {
 	float: right;
-	@include set-margin(.5em,left-bottom);
+	margin-left: .5em;
+	margin-bottom: .5em;
 
 	@include max-width(520px) {
 		float: none;
 		display: block;
 		margin:.5em auto;
-	}	
+	}
 }
 .aligncenter, img.aligncenter {}
 .alignnone, img.alignnone {}
